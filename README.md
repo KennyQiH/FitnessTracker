@@ -1,14 +1,15 @@
 # FitnessTracker
 Classes Done:
-- User Class.
+- All Classes.
+- New Classes have been completed as well.
 
 Classes Work in Progress:
 - None.
 
 Good news:
-- Changes have made so that it uses multiple windows and it saves code
+- Changes have made so that it uses multiple windows and it saves uses less code
 
-Bad news:
+Not as good news:
 - To make use of the user class two more classes had to be made
 
 
