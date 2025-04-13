@@ -1,8 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
-import java.awt.event.*;
 
-class FitnessGUI extends JFrame {
+public class FitnessGUI extends JFrame {
 	private CardLayout Layout;
 	private JPanel MainPanel;
 	private Workout workout;
@@ -15,6 +14,10 @@ class FitnessGUI extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setLayout(new GridLayout(3,1));
+		
+		JLabel UserLabel = new JLabel("Welcome, " + UserSession.getCurrentUser());
+		UserLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		add(UserLabel);
 
 		JButton WorkoutButton = new JButton("Log Workout");
 		JButton GoalButton = new JButton("Set Goal");
