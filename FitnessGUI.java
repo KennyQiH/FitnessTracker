@@ -1,30 +1,48 @@
 import java.awt.*;
 import javax.swing.*;
-import java.util.ArrayList;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.event.*;
 
-public class FitnessGUI extends JFrame{
-  private CardLayout Layout;
-  private JPanel MainPanel;
+class FitnessGUI extends JFrame {
+	private CardLayout Layout;
+	private JPanel MainPanel;
+	private Workout workout;
+	private Goals goals;
+	private Progress progress;
   
-  public FitnessGUI() {
-    setTitle("Smart Fitness Tracker");
-    setSize(600,400);
-    setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setLayout(new BorderLayout());
+	public FitnessGUI() {
+		setTitle("Smart Fitness Tracker Menu");
+		setSize(600,400);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
+		setLayout(new GridLayout(3,1));
 
-    JPanel Navigator = new JPanel();
-    JButton WorkoutButton = new JButton("Log Workout");
-    JButton GoalButton = new JButton("Set Goal");
-    JButton ProgressButton = new JButton("View Progress");
+		JButton WorkoutButton = new JButton("Log Workout");
+		JButton GoalButton = new JButton("Set Goal");
+		JButton ProgressButton = new JButton("View Progress");
 
-    Navigator.add(WorkoutButton);
-    Navigator.add(GoalButton);
-    Navigator.add(ProgressButton);
-
-    add(Navigator, BorderLayout.NORTH);
+		add(WorkoutButton);
+		add(GoalButton);
+		add(ProgressButton);
     
-    setVisible(true);
-  }
+		/*add(Navigator, BorderLayout.NORTH);
+    
+		Layout = new CardLayout();
+		MainPanel = new JPanel();
+    
+		workout = new Workout();
+		goals = new Goals();
+		progress = new Progress(workout, goals);
+    
+		MainPanel.add(workout, "Workout");
+		MainPanel.add(goals, "Goals");
+		MainPanel.add(progress, "Progress");
+    
+		add(MainPanel, BorderLayout.CENTER);*/
+    
+		WorkoutButton.addActionListener(e -> new Workout());
+		GoalButton.addActionListener(e -> new Goals());
+		ProgressButton.addActionListener(e -> new Progress());
+    
+		setVisible(true);
+  }	
 }
