@@ -13,6 +13,13 @@ Not as good news:
 - To make use of the user class two more classes had to be made
 
 
+(Please put here if anything you want to add)
+Things to add:
+- 
+
+
+
+
 ## Class Diagram
 ```mermaid
 %%{init: {'theme':'forest'}}%%
