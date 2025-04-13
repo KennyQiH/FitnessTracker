@@ -2,6 +2,6 @@ import javax.swing.*;
 
 public class FitnessTracker {
   public static void main(String[] args) {
-    SwingUtilities.invokeLater(FitnessGUI::new);
+    SwingUtilities.invokeLater(Login::new);
   }
 }
