@@ -2,12 +2,13 @@ import java.awt.*;
 import javax.swing.*;
 
 public class FitnessGUI extends JFrame {
+	//Variables
 	private CardLayout Layout;
 	private JPanel MainPanel;
 	private Workout workout;
 	private Goals goals;
 	private Progress progress;
-  
+    //Layout for the window
 	public FitnessGUI() {
 		setTitle("Smart Fitness Tracker Menu");
 		setSize(600,400);
@@ -26,21 +27,6 @@ public class FitnessGUI extends JFrame {
 		add(WorkoutButton);
 		add(GoalButton);
 		add(ProgressButton);
-    
-		/*add(Navigator, BorderLayout.NORTH);
-    
-		Layout = new CardLayout();
-		MainPanel = new JPanel();
-    
-		workout = new Workout();
-		goals = new Goals();
-		progress = new Progress(workout, goals);
-    
-		MainPanel.add(workout, "Workout");
-		MainPanel.add(goals, "Goals");
-		MainPanel.add(progress, "Progress");
-    
-		add(MainPanel, BorderLayout.CENTER);*/
     
 		WorkoutButton.addActionListener(e -> new Workout());
 		GoalButton.addActionListener(e -> new Goals());
