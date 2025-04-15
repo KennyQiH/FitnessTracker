@@ -3,10 +3,11 @@ import java.awt.*;
 import java.util.ArrayList;
 
 public class Goals extends JFrame {
+	//Variables
 	private JTextField goalField;
 	private JTextArea ListArea;
 	private static ArrayList<String> goals = new ArrayList<>();
-	
+	//Layout of the window
 	public Goals() {
 		setTitle("Set Goals");
 		setSize(400,300);
@@ -27,6 +28,7 @@ public class Goals extends JFrame {
 		
 		setVisible(true);
 	}
+	//The code for this window
 	private void setGoals() {
 		String goal = goalField.getText();
 		goals.add(goal);
