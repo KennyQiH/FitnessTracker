@@ -36,9 +36,17 @@ public class Workout extends JFrame {
 	  setVisible(true);
   }
   	private void LogWorkout() {
-  		String Workout = "Workout: " + Type.getText() + ", Duration: " + Duration.getText() + "Calories Burned: " + Calories.getText();
-  		Workouts.add(Workout);
-  		Logs.setText(String.join("\n", Workouts));
+  		try {
+  			String type = Type.getText().trim();
+  			int duration = Integer.parseInt(Duration.getText().trim());
+  			int calories = Integer.parseInt(Calories.getText().trim());
+  			
+  			String Workout = "Workout: " + Type.getText() + ", Duration: " + Duration.getText() + "minutes Calories Burned: " + Calories.getText();
+  			Workouts.add(Workout);
+  			Logs.setText(String.join("\n", Workouts));
+  		} catch (NumberFormatException ex){
+  			
+  		}
   }
   	public static ArrayList<String> getWorkouts() {
   		return Workouts;
