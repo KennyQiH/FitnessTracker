@@ -25,15 +25,13 @@ Things to add:
 %%{init: {'theme':'forest'}}%%
 classDiagram
     JFrame <|-- FitnessGUI
-    JPanel <|-- Workout 
-    JPanel <|-- Goals
-    JPanel <|-- Progress
-
+    JFrame <|-- Goals
+    JFrame <|-- Login
+    JFrame <|-- Progress
+    JFrame <|-- Workout 
+    
     namespace Java {
         class JFrame {
-
-        }
-        class JPanel {
 
         }
     }
@@ -48,9 +46,19 @@ classDiagram
         class Progress {
 
         }
-        class Workout {
+        class Login {
+
+        }
+        class Progress {
+
         }
         class User {
+        }
+        class UserSession {
+
+        }
+        class Workout {
+
         }
     }
 ```
