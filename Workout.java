@@ -45,7 +45,7 @@ public class Workout extends JFrame {
   			Workouts.add(Workout);
   			Logs.setText(String.join("\n", Workouts));
   		} catch (NumberFormatException ex){
-  			
+  			JOptionPane.showMessageDialog(this, "Invalid Duration or Calories Burned input, please re-enter.");
   		}
   }
   	public static ArrayList<String> getWorkouts() {
