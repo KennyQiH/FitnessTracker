@@ -30,9 +30,6 @@ Things to add:
 %%{init: {'theme':'forest'}}%%
 classDiagram
     JFrame <|-- FitnessGUI
-    FitnessGUI *-- Workout
-    FitnessGUI *-- Goals
-    FitnessGUI *-- Progress
 
     JFrame <|-- Goals
     JFrame <|-- Login
