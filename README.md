@@ -1,4 +1,10 @@
 # FitnessTracker
+
+How to run:
+1. Make sure you are using a java program
+2. Make sure you run the FitnessTracker.java file
+3. When closing the window it will close the running program
+
 Classes Done:
 - All Classes.
 - New Classes have been completed as well.
@@ -11,17 +17,11 @@ Good news:
 - Added negative feedback for invalid inputs for all classes in need of it
 
 Not as good news:
-- To make use of the user class two more classes had to be made
+- To make use of the user class two more classes had to be added
 
-
-(Please put here if anything you want to add)
-Things to add:
-- Units - done
-- Formatting update - done
-
-
-
-
+Newly added code:
+- Removal of negative number inputs
+- A limit on age to make it ages more realistic
 
 
 
