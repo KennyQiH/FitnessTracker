@@ -15,7 +15,7 @@ public class Progress extends JFrame {
 		ProgressArea.setEditable(false);
 		add(new JScrollPane(ProgressArea), BorderLayout.CENTER);
 		
-		JButton ProgressButton = new JButton("Generate Prgoress");
+		JButton ProgressButton = new JButton("Generate Progress");
 		add(ProgressButton, BorderLayout.SOUTH);
 		
 		ProgressButton.addActionListener(e -> generateProgress());
