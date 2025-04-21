@@ -58,7 +58,7 @@ public class Workout extends JFrame {
   				return;
   			}
   			//Format of the response
-  			String Workout = "Workout: " + type + ", Duration: " + duration + "minutes Calories Burned: " + calories;
+  			String Workout = "Workout: " + type + ", Duration: " + duration + " minutes, Calories Burned: " + calories;
   			Workouts.add(Workout);
   			Logs.setText(String.join("\n", Workouts));
   		} catch (NumberFormatException ex){
