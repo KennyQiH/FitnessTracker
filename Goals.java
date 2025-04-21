@@ -11,29 +11,57 @@ public class Goals extends JFrame {
 	public Goals() {
 		setTitle("Set Goals");
 		setSize(400,300);
-		setLayout(new GridLayout(3,1));
+		setLayout(new BorderLayout());
 		setLocationRelativeTo(null);
-		
-		add(new JLabel("Set a new goal"));
+		//A panel which handles the data given
+		JPanel Inputs = new JPanel(new GridLayout(1,2));
 		goalField = new JTextField();
-		add(goalField);
-		
+		Inputs.add(goalField);
+		//Adding goals
 		JButton GoalsButton = new JButton("Set Goal");
-		add(GoalsButton);
+		Inputs.add(GoalsButton);
 		
-		ListArea = new JTextArea(5,10);
-		add(new JScrollPane(ListArea));
+		add(Inputs, BorderLayout.NORTH);
+		//Recently created goals shown
+		ListArea = new JTextArea();
+		add(new JScrollPane(ListArea), BorderLayout.CENTER);
+		//Removing the last goal created
+		JButton DeleteGoal = new JButton("Remove last Goal");
+		add(DeleteGoal, BorderLayout.SOUTH);
 		
 		GoalsButton.addActionListener(e -> setGoals());
+		DeleteGoal.addActionListener(e -> removeGoals());
+		
+		updateGoalList();
 		
 		setVisible(true);
 	}
 	//The code for this window
 	private void setGoals() {
-		String goal = goalField.getText();
-		goals.add(goal);
-		ListArea.setText(String.join("\n", goals));
+		String goal = goalField.getText().trim();
+		if (!goal.isEmpty()) {
+			goals.add(goal);
+			updateGoalList();
+			goalField.setText("");
+		} else {
+			JOptionPane.showMessageDialog(this, "Goal cannot be emtpy");
+		}
+
 	}
+	
+	private void removeGoals() {
+		if (!goals.isEmpty()) {
+		goals.remove(goals.size() -1);
+		updateGoalList();
+		} else {
+			JOptionPane.showMessageDialog(this, "There is no gols to remove");
+		}
+	}
+	
+	private void updateGoalList() {
+        ListArea.setText(String.join("\n", goals));
+    }
+	
 	public static ArrayList<String> getGoals() {
 		return goals;
 	}
