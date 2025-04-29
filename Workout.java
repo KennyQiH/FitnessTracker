@@ -39,7 +39,7 @@ public class Workout extends JFrame {
   }
 	//The code for this window
   	private void LogWorkout() {
-  		//creating a negative response for invalid inputs
+  		//creating a negative feedback for invalid inputs
   		try {
   			String type = Type.getText().trim();
   			String durationText = Duration.getText().trim();
