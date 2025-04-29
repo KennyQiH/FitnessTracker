@@ -39,6 +39,7 @@ public class Goals extends JFrame {
 	//The code for this window
 	private void setGoals() {
 		String goal = goalField.getText().trim();
+		//A negative feedback
 		if (!goal.isEmpty()) {
 			goals.add(goal);
 			updateGoalList();
@@ -48,7 +49,7 @@ public class Goals extends JFrame {
 		}
 
 	}
-	
+	//A negative feedback to check the following conditions
 	private void removeGoals() {
 		if (!goals.isEmpty()) {
 		goals.remove(goals.size() -1);
